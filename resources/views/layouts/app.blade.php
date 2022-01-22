@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Categories</a>
+                            <a href="{{ route('category.create') }}" class="nav-link">Categories</a>
                         </li>
                     </ul>
 
