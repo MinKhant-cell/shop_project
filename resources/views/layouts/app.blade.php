@@ -36,6 +36,9 @@
                         <li class="nav-item">
                             <a href="{{ route('category.create') }}" class="nav-link">Categories</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('brand.create') }}" class="nav-link">Brands</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

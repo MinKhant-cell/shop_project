@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware("auth")->group(function(){
     Route::resource('category',\App\Http\Controllers\CategoryController::class);
+    Route::resource('brand',\App\Http\Controllers\BrandController::class);
     Route::view("test","test")->name('test');
     Route::post("test",[TestController::class,'test'])->name('test');
 

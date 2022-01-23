@@ -9,40 +9,36 @@
     </thead>
     <tbody>
 
-    @forelse($categories as $category)
+    @forelse($brands as $brand)
         <tr>
-            <td>{{ $category->id }}</td>
-            <td>{{ $category->title }}</td>
+            <td>{{ $brand->id }}</td>
+            <td>{{ $brand->title }}</td>
             <td>
 
                 <div class="btn btn-group">
 
-                    <a href="{{ route('category.edit',$category->id) }}" class="btn btn-sm btn-outline-primary">
+                    <a href="{{ route('category.edit',$brand->id) }}" class="btn btn-sm btn-outline-primary">
                         <i class="fas fa-pencil-alt fa-fw"></i>
                     </a>
-                    <button class="btn btn-outline-primary btn-sm" form="del{{ $category->id }}">
+                    <button class="btn btn-outline-primary btn-sm" form="del{{ $brand->id }}">
                         <i class="fas fa-trash-alt fa-fw"></i>
                     </button>
                 </div>
 
-                <form action="{{ route('category.destroy',$category->id) }}" class="d-none" id="del{{ $category->id }}" method="post">
+                <form action="{{ route('category.destroy',$brand->id) }}" class="d-none" id="del{{ $brand->id }}" method="post">
                     @csrf
                     @method('delete')
 
                 </form>
 
-
-
-
-
             </td>
             <td>
                 <p class="mb-0 small">
-                    <i class="fas fa-calendar fa-fw"></i> {{ $category->created_at->format('d / m / Y') }}
+                    <i class="fas fa-calendar fa-fw"></i> {{ $brand->created_at->format('d / m / Y') }}
                 </p>
                 <p class="mb-0 small">
                     <i class="fas fa-clock fa-fw"></i>
-                    {{ $category->created_at->format("h:i a") }}
+                    {{ $brand->created_at->format("h:i a") }}
                 </p>
 
 
